@@ -5,6 +5,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --background-color: 1;
+}
+$backgroundColor: var(--background-color);
+
+.yeet{
+    height: $backgroundColor;
+    width: $backgroundColor;
+}
+
+body {
+    z-index: 0;
+}
+
 .wrapper{
     height: 300px;
     width: 300px;
@@ -30,11 +45,11 @@
     height: 300px;
     transform-style: preserve-3d;
     position: relative;
-    animation: spin 12s linear infinite;
+    transform: rotateY(calc($backgroundColor * 1deg));
 }
 @keyframes spin {
     100%{
-        transform: rotateY(360deg);
+        transform: rotateY(30deg);
     }
 }
 .image-cube div{
@@ -61,3 +76,18 @@ img{
     transform-origin: 0 50%;
 }
 
+.yeet {
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+}
+
+.blah {
+    height: 4rem;
+    width: 100vw;
+    background-color: brown;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+}
